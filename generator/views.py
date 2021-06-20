@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 def home_view(request):
-	send_mail(
+	email = send_mail(
     'Subject here',
     'Here is the message.',
     settings.EMAIL_HOST_USER,
