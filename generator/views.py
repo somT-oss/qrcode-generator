@@ -5,6 +5,10 @@ from django.conf import settings
 
 
 def home_view(request):
+    return HttpResponse("Welcome home")
+
+
+def sending_email(request):
     send_mail(
     'Subject here',
     'Here is the message.',
@@ -12,4 +16,5 @@ def home_view(request):
     ['somtochukwuuchegbu@gmail.com'],
     fail_silently=False,
 )
-    return HttpResponse("Your email has been sent")
+
+    return HttpResponse("Your mail has been sent")
