@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static 
 from django.conf import settings 
-from generator.views import home_view
+from generator.views import home_view, sending_email
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", home_view, name="home"), 
+    path("", home_view, name="home"),
+    path("send_mail", sending_email, name="send_mail"), 
 ]
 
 
