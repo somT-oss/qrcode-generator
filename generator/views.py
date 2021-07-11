@@ -5,4 +5,10 @@ from django.conf import settings
 
 
 def home_view(request):
-    return HttpResponse("Your email has been sent")
+    email = send_mail("Account confirmation mail", f"Click on the link to activate your account",
+                      settings.EMAIL_HOST_USER, ["somtochukwuuchegbu@gmail.com"])
+    return render(request, "email.html", context={})
+
+
+def send_student_email(request):
+    pass
